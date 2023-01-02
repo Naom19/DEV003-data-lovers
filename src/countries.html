@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styleCountries.css" />
     <link rel="stylesheet" href="index.html"/>
-    
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
+    <script src="data.js" type="module"></script>
 </head>
 <body>
     <!--<iframe class="ifMenu" src="menu.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="00" scrolling="no"></iframe>-->
@@ -20,16 +20,15 @@
     </div>
 
     <section class="containerCountries">
-    <form action="#">
-        <input class="searchCountries" type="text" id="inputCountry" placeholder="Buscar por país">
-    </form>
-
+        <form action="#">
+            <input class="searchCountries" type="text" id="inputCountry" placeholder="Buscar por país">
+        </form>
         <table id="tableCountry">
             <tr>
-              <th class="country">País</th>
-              <th class="athletesNumber">Número de atletas</th>
+              <th class="country"></th>
+              <th class="athletesNumber" type="number">Número de atletas</th>
             </tr>
-                  <td class="flag" > <img src="https://cdn.britannica.com/49/149-004-986E1BD8/flag-design-similarities-Ecuador-Colombia-flags-Venezuela.jpg" height="10rem" width="13rem">poner bandera</td>
+                  <td class="flag"> <img src="https://cdn.britannica.com/49/149-004-986E1BD8/flag-design-similarities-Ecuador-Colombia-flags-Venezuela.jpg" height="10rem" width="13rem">poner bandera</td>
               <td>29</td>
           </table>
     </section>

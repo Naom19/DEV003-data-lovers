@@ -1,0 +1,99 @@
+@font-face {
+    font-family: OlympicSans;
+    src: url(fonts/OlympicSans.ttf);
+}
+
+body {
+    display: flexbox;
+    justify-content: center;
+    background-color:  #F5F5F5;
+    font-family: OlympicSans black;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: OlympicSans black;
+  }  
+
+.olympicRingsLogo {
+    height: 2rem;
+    padding-left: 4rem;
+}
+
+.firtSection {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1rem;
+    padding: 5%;
+}
+
+#rioLogoCountries {
+    height: 12rem;
+    width: 11rem;
+    padding-right: 10%;
+}
+
+#rioImageCountries {
+    height: 12rem;
+    width: 20rem;
+    border-radius: 5%;
+    background-color: #F5F5F5;
+}
+
+#navigationMenu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem black;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3rem;
+}
+
+#inputAthletes {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.1rem solid rgb(190,190,190);
+    border-radius: 5%;
+    padding-left: 5%;
+    font-family: OlympicSans;
+}
+
+.containerAthletes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 0.5rem;
+    width: 15rem
+    /*max-width: var(--fixed-width);*/
+}
+
+.searchBtn {
+    border-color: #ffffff;
+    display: grid;
+    align-items: center;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.125rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: OlympicSans;
+}
+
+.dataAthletes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25rem;
+    background-color: #ffffff;
+    padding-left: 2rem;
+    margin-right: 15rem;
+}
