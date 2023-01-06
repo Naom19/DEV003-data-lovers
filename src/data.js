@@ -1,5 +1,7 @@
 import olympics from "./data/athletes/olympics.js"; 
 
+export const athletesData = olympics.athletes;
+
 export function searchAthleteByName(athleteName){
   //console.log(athleteName);
   // 1. Iterar todo el arreglo de atletas

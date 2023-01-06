@@ -1,16 +1,36 @@
-import {searchAthleteByName} from "./data.js"
+import {athletesData, searchAthleteByName} from "./data.js"
 //Variable del input
 const searchButton = document.querySelector(".searchBtn");
+const nameNotFound = document.querySelector("#notFound");
 //1. creamos una función que al hacer click en el botón busque la información del input (obtener nombre de atleta)
 const inputName = document.getElementById("inputAthletes");
-searchButton.addEventListener("click", function (){
+//searchButton.addEventListener("click", function (){
+
+
+const totalAthletes = searchAthleteByName(athletesData);
+
+searchButton.addEventListener ("click", tableAthletes, showTableAthletes); 
+
+function showTableAthletes () {
+  const showingTable = document.querySelector("#infoAthletes");
+  showingTable.classList.toggle("tableAthletes");
+}
+
+
+window.addEventListener("DOMContentLoaded", function () {
+  searchAthleteByName(totalAthletes);
+  searchButton.textContent = totalAthletes.lenght;
+});
+
+
+
+function tableAthletes () {
   
-  // 1.2 Definir una constante valueToSearch cuyo valor será el de la caja de texto con ID.... *const inputName*
-  // 2. Definir una condicional que evalue si el valor de valueToSearch es diferente de vacío y de nulo  
+  
   if ( inputName.value === "" || inputName.value === null ||inputName.value === undefined ) {
-    inputName.placeholder = "Nombre no encontrado, por favor introduce un nombre válido" 
+    nameNotFound.textContent = "Nombre no encontrado, por favor introduce un nombre válido"
  
-  } else {
+} else {
     const selectAthlete = searchAthleteByName(inputName.value);
     const showName = document.querySelector("#nameTag");
     showName.textContent = selectAthlete.name;
@@ -29,5 +49,6 @@ searchButton.addEventListener("click", function (){
   }
   // 2.1 Definir una constante 'infoAtleta cuyo valor será el resultado del llamado del método buscarAtletla(valueToSearch)
   // 2.2 Manipular el DOM para mostrar los datos del atleta buscado en sus respectivos elementos de HTML
+}
+//});
 
-});
