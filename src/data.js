@@ -1,14 +1,45 @@
-// estas funciones son de ejemplo
+import olympics from "./data/athletes/olympics.js"; 
 
-import olympics from "./data/athletes/olympics.js";
-import athletes from "./data/athletes/olympics.js";
+export function searchAthleteByName(athleteName){
+  //console.log(athleteName);
+  // 1. Iterar todo el arreglo de atletas
+  for (let i = 0; i < olympics.athletes.length; i++) { //aquí antes estaba como i<= olympics.athletes.lenght; 
+    const athletle = olympics.athletes[i];
+    
+    if (athletle.name === athleteName) {
+     
+      return athletle;
+    }
+  }
+  return {"name": "",
+    "gender": "",
+    "height": "",
+    "weight": "",
+    "sport": "",
+    "team": "",
+    "noc": "",
+    "age": "",
+    "event": "",
+    "medal": ""}
+}
+  // 2. Por cada atleta iterado comparar su campo name contra athleteName
+  // 3. Si coincide el nombre, retornar el atleta iterado
+  // 4. Si no coincide retornar objeto vacio
+  
 
-//const teamList = athletes.team;  //Arrojó undefined en console.log
+/**function showPerson(person) { //Pasamos esta función de main.js a data.js
+  const selectAthlete = olympics.athletes[person];
+  showName.textContent = selectAthlete.name;
+  showCountry.textContent = selectAthlete.team;
+  showSport.textContent = selectAthlete.sport;
+  showEvent.textContent = selectAthlete.event;
+  showHeight.textContent = selectAthlete.height;
+  showWeight.textContent = selectAthlete.weight;
+  showMedal.textContent = selectAthlete.medal;
+}**/
 
-//const athletesList = athletes; //Esta variable si la aceptó pero al usarla en la funcion nos apareció athletesList[object Object] en el console.log
 
 //console.log(JSON.stringify(athletesList)); de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
-//const noc = athletes.noc; Arrojó undefined en console.log
 
 //const searchCountry = document.querySelector(".searchCountries");
 //const country = document.querySelector(".country");
@@ -18,23 +49,16 @@ import athletes from "./data/athletes/olympics.js";
 //function countries () {
   //const container= document.querySelector("#tableCountry");
   //const nameOfTheCountry = country.value;
-  //for (let i = 0; i <= olympics.athletes.length; i++) {
-    //const countriesTable = olympics.athletes[5].value;//antes[i].team;
-    //const abreviationNocTable = olympics.athletes[6].value;//antes[i].noc;
+  //for (let i = 0; i <= data.athletes.length; i++) {
+    //const countriesTable = data.athletes[i].value;//antes[i].team;
+    //const abreviationNocTable = data.athletes[i].value;//antes[i].noc;
     //let nAthletes = document.querySelector(".athletesNumber");
     
     //if (searchCountry === countriesTable || searchCountry === abreviationNocTable)  {
       //countriesFunction.textContent = athletes.team;
-      //nameOfTheCountry.textContent = olympics.athletes[5].value;
+      //nameOfTheCountry.textContent = data.athletes[5].value;
       // como asignar a mi tabla/caja de texto el valor de athletes[i].PROPIEDADAUSAR
     //} 
   //} 
 //}
-  //console.log ("countries" + countries)
-  //console.log ("countriesFunction" + countries)
-
-//Creando funciones para el html de atletas
-
-
-
 

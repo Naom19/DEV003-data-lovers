@@ -26,13 +26,13 @@
         </nav>
       </header>
 
-    <!--TODO: 
+    <!--
     1. Crear una sección o div para el filtro(input) y botón.
     2. Crear el filtro(input) para atletas.
     3. Crear un botón.
     4. Estilizar en CSS. (Pasar info del menú principal )
     5. En JS declarar const con querySelector
-    6. Crear una función como la del video para llamar la información del array athletes y mostrarlo en la interfaz. (5Horas)
+    6. Crear una función como la del video para llamar la información del array athletes y mostrarlo en la interfaz. 
 -->
     <main>
         <div class="firtSection">
@@ -41,22 +41,44 @@
         </div>
         <section class="containerAthletes">
             <div class="headerContainer">
-            <h2 class="titleAthletes">Atletas</h2>
+            <h2 class="titleAthletes">Atletas olímpicos</h2>
             <input type="text" id="inputAthletes" placeholder="Nombre de atleta">
             <button class="searchBtn" id="searchAthletesBtn">Buscar</button>
             </div>
-            <article class="dataAthletes">
-                <div class="photoAthlete">
-                    <img id="imageAthlete" alt="" />
-                </div>
-                <h4 id="nameTag"></h4>
-                <p id="countryTag"></p>
-                <p id="sportTag"></p>
-                <p id="eventTag"></p>
-                <p id="heightTag"></p>
-                <p id="weightTag"></p>
-                <p id="medalTag"></p>
-            </article>
+           
+            <table>
+                <tbody class="dataAthletes">
+                    <tr>
+                        <th>Name</td>
+                        <td id="nameTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Country</td>
+                        <td id="countryTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Sport</td>
+                        <td id="sportTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Event</td>
+                        <td id="eventTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Height</td>
+                        <td id="heightTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Weight</td>
+                        <td id="weightTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Medal</td>
+                        <td id="medalTag"></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
     </main>
 </body>

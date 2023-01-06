@@ -1,45 +1,33 @@
-import olympics from "./data/athletes/olympics.js";
-// import data from './data/lol/lol.js';
-//const athletesArray= athletes;
-const searchAthletesBtn = document.querySelector(".searchBtn");
-const inputName = document.querySelector("#inputAthletes");
-const showName = document.querySelector("#nameTag");
-const showCountry = document.querySelector("#countryTag"); 
-const showSport = document.querySelector("#sportTag");
-const showEvent = document.querySelector("#eventTag");
-const showHeight = document.querySelector("#heightTag");
-const showWeight = document.querySelector("#weightTag")
-const showMedal = document.querySelector("#medalTag");
+import {searchAthleteByName} from "./data.js"
+//Variable del input
 const searchButton = document.querySelector(".searchBtn");
-
-
-let athleteItem = 0
-
-window.addEventListener("DOMContentLoaded", function(){
-  const selectAthlete = olympics.athletes[athleteItem];
-  showName.textContent = selectAthlete.name;
-  showCountry.textContent = selectAthlete.team;
-  showSport.textContent = selectAthlete.sport;
-  showEvent.textContent = selectAthlete.event;
-  showHeight.textContent = selectAthlete.height;
-  showWeight.textContent = selectAthlete.weight;
-  showMedal.textContent = selectAthlete.medal;
-});
-
-function showPerson(person) {
-  const selectAthlete = olympics.athletes[person];
-  showName.textContent = selectAthlete.name;
-  showCountry.textContent = selectAthlete.team;
-  showSport.textContent = selectAthlete.sport;
-  showEvent.textContent = selectAthlete.event;
-  showHeight.textContent = selectAthlete.height;
-  showWeight.textContent = selectAthlete.weight;
-  showMedal.textContent = selectAthlete.medal;
-}
-
+//1. creamos una función que al hacer click en el botón busque la información del input (obtener nombre de atleta)
+const inputName = document.getElementById("inputAthletes");
 searchButton.addEventListener("click", function (){
-  console.log("El botón funciona");
-  athleteItem = Math.floor(Math.random()*olympics.athletes.length);
-  showPerson(athleteItem); });
+  
+  // 1.2 Definir una constante valueToSearch cuyo valor será el de la caja de texto con ID.... *const inputName*
+  // 2. Definir una condicional que evalue si el valor de valueToSearch es diferente de vacío y de nulo  
+  if ( inputName.value === "" || inputName.value === null ||inputName.value === undefined ) {
+    inputName.placeholder = "Nombre no encontrado, por favor introduce un nombre válido" 
+ 
+  } else {
+    const selectAthlete = searchAthleteByName(inputName.value);
+    const showName = document.querySelector("#nameTag");
+    showName.textContent = selectAthlete.name;
+    const showCountry = document.querySelector("#countryTag"); 
+    showCountry.textContent = selectAthlete.team;
+    const showSport = document.querySelector("#sportTag");
+    showSport.textContent = selectAthlete.sport;
+    const showEvent = document.querySelector("#eventTag");
+    showEvent.textContent = selectAthlete.event;
+    const showHeight = document.querySelector("#heightTag");
+    showHeight.textContent = selectAthlete.height;
+    const showWeight = document.querySelector("#weightTag")
+    showWeight.textContent = selectAthlete.weight;
+    const showMedal = document.querySelector("#medalTag");
+    showMedal.textContent = selectAthlete.medal;
+  }
+  // 2.1 Definir una constante 'infoAtleta cuyo valor será el resultado del llamado del método buscarAtletla(valueToSearch)
+  // 2.2 Manipular el DOM para mostrar los datos del atleta buscado en sus respectivos elementos de HTML
 
-//console.log(example, data);
+});

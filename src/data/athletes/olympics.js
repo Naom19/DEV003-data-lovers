@@ -14441,7 +14441,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Janne Mller-Wieland",
+      "name": "Janne Mller Wieland",
       "gender": "F",
       "height": "175",
       "weight": "69",
@@ -14765,7 +14765,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Tyla Nathan-Wong",
+      "name": "Tyla Nathan Wong",
       "gender": "F",
       "height": "163",
       "weight": "58",
@@ -15269,7 +15269,7 @@ export default {
       "medal": "Silver"
     },
     {
-      "name": "Siobhan-Marie O'Connor",
+      "name": "Siobhan Marie O'Connor",
       "gender": "F",
       "height": "173",
       "weight": "60",
@@ -15341,7 +15341,7 @@ export default {
       "medal": "Silver"
     },
     {
-      "name": "Oh Hye-Ri",
+      "name": "Oh Hye Ri",
       "gender": "F",
       "height": "182",
       "weight": "69",
@@ -15365,7 +15365,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Poliana Okimoto-Cintra",
+      "name": "Poliana Okimoto Cintra",
       "gender": "F",
       "height": "165",
       "weight": "52",
@@ -15485,7 +15485,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Om Yun-Chol",
+      "name": "Om Yun Chol",
       "gender": "M",
       "height": "151",
       "weight": "56",
@@ -15629,7 +15629,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Inna Volodymyrivna Osypenko-Radomska",
+      "name": "Inna Volodymyrivna Osypenko Radomska",
       "gender": "F",
       "height": "166",
       "weight": "63",
@@ -15677,7 +15677,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Oussama Al-Oueslati",
+      "name": "Oussama Al Oueslati",
       "gender": "M",
       "height": "199",
       "weight": "80",
@@ -15869,7 +15869,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Yekaterina Andreyevna Pantyulina-Lisunova",
+      "name": "Yekaterina Andreyevna Pantyulina Lisunova",
       "gender": "F",
       "height": "175",
       "weight": "64",
@@ -15917,7 +15917,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Park In-Bee",
+      "name": "Park In Bee",
       "gender": "F",
       "height": "168",
       "weight": "65",
@@ -16181,7 +16181,7 @@ export default {
       "medal": "Silver"
     },
     {
-      "name": "Kasey Perry-Glass",
+      "name": "Kasey Perry Glass",
       "gender": "F",
       "height": "163",
       "weight": "59",
@@ -16553,7 +16553,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Marina Viktorovna Poltoran-Litvinchuk",
+      "name": "Marina Viktorovna Poltoran Litvinchuk",
       "gender": "F",
       "height": "178",
       "weight": "68",
@@ -17549,7 +17549,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Ri Se-Gwang",
+      "name": "Ri Se Gwang",
       "gender": "M",
       "height": "155",
       "weight": "54",
@@ -17561,7 +17561,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Helen Richardson-Walsh",
+      "name": "Helen Richardson Walsh",
       "gender": "F",
       "height": "165",
       "weight": "55",
@@ -17585,7 +17585,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Linn-Kristin Ullevoldster Riegelhuth Koren",
+      "name": "Linn Kristin Ullevoldster Riegelhuth Koren",
       "gender": "F",
       "height": "175",
       "weight": "66",
@@ -17597,7 +17597,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Rim Jong-Sim",
+      "name": "Rim Jong Sim",
       "gender": "F",
       "height": "162",
       "weight": "75",
@@ -17609,7 +17609,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Anne-Marie Rindom",
+      "name": "Anne Marie Rindom",
       "gender": "F",
       "height": "170",
       "weight": "68",
@@ -17621,7 +17621,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Teddy Pierre-Marie Riner",
+      "name": "Teddy Pierre Marie Riner",
       "gender": "M",
       "height": "203",
       "weight": "139",
@@ -17681,7 +17681,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Mlina Robert-Michon",
+      "name": "Mlina Robert Michon",
       "gender": "F",
       "height": "180",
       "weight": "85",
@@ -18269,7 +18269,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Abdul-Rashid Bulayevich Sadulayev",
+      "name": "Abdul Rashid Bulayevich Sadulayev",
       "gender": "M",
       "height": "177",
       "weight": "86",
@@ -18281,7 +18281,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Lucie afov",
+      "name": "Lucie Afov",
       "gender": "F",
       "height": "177",
       "weight": "65",
@@ -18341,7 +18341,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Ibragim Magomed-Saidovich Saidov",
+      "name": "Ibragim Magomed Saidovich Saidov",
       "gender": "M",
       "height": "180",
       "weight": "125",
@@ -18425,7 +18425,7 @@ export default {
       "medal": "Silver"
     },
     {
-      "name": "Germn Sal Snchez Snchez",
+      "name": "Germán Saúl Sánchez Sánchez",
       "gender": "M",
       "height": "165",
       "weight": "50",
@@ -19601,7 +19601,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Sara Slott-Bruun Petersen",
+      "name": "Sara Slott Bruun Petersen",
       "gender": "F",
       "height": "171",
       "weight": "57",
@@ -20045,7 +20045,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "rif rifov",
+      "name": "Rif Rifov",
       "gender": "M",
       "height": "180",
       "weight": "97",
@@ -20057,7 +20057,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Sabah riti",
+      "name": "Sabah Riti",
       "gender": "M",
       "height": "192",
       "weight": "130",
@@ -20297,7 +20297,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Vladimir timac",
+      "name": "Vladimir Timac",
       "gender": "M",
       "height": "211",
       "weight": "112",
@@ -20669,7 +20669,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "ron Szilgyi",
+      "name": "Ron Szilgyi",
       "gender": "M",
       "height": "180",
       "weight": "78",
@@ -21041,7 +21041,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Brianne Theisen-Eaton",
+      "name": "Brianne Theisen Eaton",
       "gender": "F",
       "height": "175",
       "weight": "64",
@@ -22613,7 +22613,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Christopher James \"Chris\" Walker-Hebborn",
+      "name": "Christopher James \"Chris\" Walker Hebborn",
       "gender": "M",
       "height": "184",
       "weight": "84",
@@ -22769,7 +22769,7 @@ export default {
       "medal": "Bronze"
     },
     {
-      "name": "Natasha Watcham-Roy",
+      "name": "Natasha Watcham Roy",
       "gender": "F",
       "height": "170",
       "weight": "67",
@@ -23225,7 +23225,7 @@ export default {
       "medal": "Silver"
     },
     {
-      "name": "Michelle Williams (-Toro)",
+      "name": "Michelle Williams (Toro)",
       "gender": "F",
       "height": "175",
       "weight": "67",
@@ -23273,7 +23273,7 @@ export default {
       "medal": "Silver"
     },
     {
-      "name": "Novlene Hilaire Williams-Mills",
+      "name": "Novlene Hilaire Williams Mills",
       "gender": "F",
       "height": "168",
       "weight": "57",
@@ -23801,7 +23801,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Yoon Jin-Hee",
+      "name": "Yoon Jin Hee",
       "gender": "F",
       "height": "158",
       "weight": "53",
@@ -24197,7 +24197,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Valeriya Sergeyevna Zholobova-Koblova",
+      "name": "Valeriya Sergeyevna Zholobova Koblova",
       "gender": "F",
       "height": "164",
       "weight": "58",
