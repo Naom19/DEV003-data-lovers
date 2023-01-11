@@ -122,7 +122,7 @@ main {
 }
 
 #infoAthletes {
-    /*display: none;*/
+    display: none;
     width: 100%;
     background-color: #ffffff;
     table-layout: auto;

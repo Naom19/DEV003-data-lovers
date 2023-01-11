@@ -1,16 +1,15 @@
 import olympics from "./data/athletes/olympics.js"; 
 
-export const athletesData = olympics.athletes;
-
-export function searchAthleteByName(athleteName){
-  //console.log(athleteName);
+//export const athletesData = olympics.athletes;
+export function searchAthleteByName(athleteName,){
+  
   // 1. Iterar todo el arreglo de atletas
   for (let i = 0; i < olympics.athletes.length; i++) { //aquí antes estaba como i<= olympics.athletes.lenght; 
-    const athletle = olympics.athletes[i];
+    const athlete = olympics.athletes[i];
     
-    if (athletle.name === athleteName) {
+    if (athlete.name === athleteName) {
      
-      return athletle;
+      return athlete;
     }
   }
   return {"name": "",
@@ -24,9 +23,11 @@ export function searchAthleteByName(athleteName){
     "event": "",
     "medal": ""}
 }
-  // 2. Por cada atleta iterado comparar su campo name contra athleteName
-  // 3. Si coincide el nombre, retornar el atleta iterado
-  // 4. Si no coincide retornar objeto vacio
+// 2. Por cada atleta iterado comparar su campo name contra athleteName
+// 3. Si coincide el nombre, retornar el atleta iterado
+// 4. Si no coincide retornar objeto vacio
+
+//import athletes from "./data/athletes/olympics.js"
   
 
 /**function showPerson(person) { //Pasamos esta función de main.js a data.js
