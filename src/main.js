@@ -11,6 +11,12 @@ searchButton.addEventListener("click", function showAll (){
   showingTable();
 });
 
+function showingTable() {
+  document.querySelector("#infoAthletes").style.display = "block";
+}
+//4. Crear una función showAll que contenga las dos funciones de arriba y se utilice ese nombre de función en el evento onclick  
+
+
 function showInfoAthletes () {
 
   // comenté algunos cambios, porque mandabamos la info de todo el array al botón y por eso no aparecía al cargar la interfaz
@@ -27,7 +33,8 @@ function showInfoAthletes () {
   //2. Definir una condicional que evalúe si el valor de valueToSearch es diferente de vacío y nulo
 
   if ( inputName.value === "" || inputName.value === null ||inputName.value === undefined ) {
-    nameNotFound.textContent = "Nombre no encontrado, por favor introduce un nombre válido"
+    nameNotFound.textContent = "Nombre no encontrado, por favor introduce un nombre válido";
+    
     // modificas la propiedad de la tabla para ocultarla
   } else {
     const selectAthlete = searchAthleteByName(inputName.value);
@@ -53,8 +60,4 @@ function showInfoAthletes () {
 //3. Crear una función para mostrar y ocultar el contenido de la tabla
 // obtengo en una variable/constante la referencia a la tabla
 
-function showingTable() {
-  document.querySelector("#infoAthletes").style.display = "block";
-}
-//4. Crear una función showAll que contenga las dos funciones de arriba y se utilice ese nombre de función en el evento onclick  
 
