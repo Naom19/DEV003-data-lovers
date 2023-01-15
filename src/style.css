@@ -6,12 +6,20 @@
 body {
     display: flexbox;
     background-color: #141E61;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto ;
+}
+
+button, section, h1, div, a, footer{
+    font-family: OlympicSans;
 }
 
 .olympicRingsLogo {
     height: 2rem;
     padding-left: 4rem;
 }
+
 
 #navigationMenu {
     display: flex;
@@ -43,7 +51,7 @@ nav:hover a:not(:hover) {
 }
 
 .navigationButtons {
-    width: 20%;
+    width: 40%;
     height: auto;
     border: transparent;
     background-color: #ffffff;
@@ -91,3 +99,12 @@ h1 {
     padding: 1rem 2rem;
 }
 
+
+footer{
+    padding-left: 15%;
+    background-color:#ffffff;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}

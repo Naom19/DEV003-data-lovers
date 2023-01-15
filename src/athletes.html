@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.html"/>
+    <!-- <link rel="stylesheet" href="index.html"/> -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styleAthletes.css"/>
     <script src="main.js" type="module"></script>
@@ -16,10 +16,10 @@
 <body>
     <header>
         <nav class="navigationBar" id="navigationMenu">
-          <a href="#">
-            <img class="olympicRingsLogo" id="Olympic_logo" src="https://olympics.com/images/static/b2p-images/logo_color.svg">
+          <a href="index.html#mainMenu">
+            <img class="olympicRingsLogo" id="Olympic_logo"  src="https://olympics.com/images/static/b2p-images/logo_color.svg">
           </a>
-          <button class="navigationButtons"><a id="rioButton" href="#">Río 2016</a></button>
+          <button class="navigationButtons"><a id="rioButton" href="index.html#rio_2016">Río 2016</a></button>
           <button class="navigationButtons"><a id="countriesButton" href="countries.html" >Países</a></button>
           <button class="navigationButtons"><a id="sportsButton" href="sports.html">Deportes</a></button>
           <button class="navigationButtons"><a id="athletesButton" href="athletes.html">Atletas</a></button>
@@ -41,10 +41,10 @@
         </div>
         <section class="containerAthletes">
             <div class="headerContainer">
-            <h2 class="titleAthletes">Atletas olímpicos</h2>
-            <input type="text" id="inputAthletes" placeholder="Nombre de atleta">
-            <label type="text" id="notFound"></label>
-            <button class="searchBtn" id="searchAthletesBtn">Buscar</button>
+                <h2 class="titleAthletes">Atletas olímpicos</h2>
+                <input type="text" id="inputAthletes" placeholder="Nombre de atleta">
+                <label type="text" id="notFound"></label>
+                <button class="searchBtn" id="searchAthletesBtn">Buscar</button>
             </div>
            
             <table class="tableAthletes" id="infoAthletes">
@@ -82,5 +82,9 @@
 
         </section>
     </main>
+    <footer class="footer-container">
+        <p class="float-right"><a href="#">Ir arriba</a></p>
+        <p>&copy; 2022-2023 DEV003 Regional - Laboratoria - DIANA GUAIÑA - NAOMI PEÑA - PROYECTO Data lovers  &middot; <a href="#">Privacy</a> </p>
+    </footer>
 </body>
 </html>
