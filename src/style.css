@@ -1,0 +1,93 @@
+@font-face {
+    font-family: OlympicSans;
+    src: url(fonts/OlympicSans.ttf);
+}
+
+body {
+    display: flexbox;
+    background-color: #141E61;
+}
+
+.olympicRingsLogo {
+    height: 2rem;
+    padding-left: 4rem;
+}
+
+#navigationMenu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem black;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3rem;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: OlympicSans;
+    font-weight: 900;
+    color: black;
+    padding: 0.6rem;
+    transition: 0.5s ease;
+}
+
+nav:hover a {
+    color: black;
+}
+
+nav:hover a:not(:hover) {
+    color: black;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+.navigationButtons {
+    width: 20%;
+    height: auto;
+    border: transparent;
+    background-color: #ffffff;
+}
+
+.principalContent {
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    padding: 10% 10% 10%;
+}
+/*Aqui definimos las caracteristicas de la sección olympicGames, que contiene h1 con el título y el div con la descipción*/
+section{
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
+    margin-bottom: 20%;
+}
+
+h1 {
+    text-align: center;
+    background-color: #ffffff;
+    width: 50%;
+    /*height: 30%;*/
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    align-self: center;
+    outline: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /*padding-left: 1rem;
+    padding-right: 1rem; Buscar como podemos editar las propiedades de los bordes y mantener el ancho*/
+    border-radius: 5%;
+}
+
+.olympicsDescription {
+    display: flex;
+    align-content: space-between;
+    align-self: stretch;
+    text-align: justify;
+    color: #ffffff;
+    padding: 1rem 2rem;
+}
+
