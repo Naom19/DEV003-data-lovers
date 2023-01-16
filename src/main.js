@@ -1,10 +1,12 @@
-import {searchAthleteByName} from "./data.js";
+import {searchAthleteByName, athletesData, listCountries} from "./data.js";
+//import olympics from "./data/athletes/olympics.js";
 //Variable del input
 const searchButton = document.querySelector(".searchBtn");
 const nameNotFound = document.querySelector("#notFound");
 
 //1. creamos una función que al hacer click en el botón busque la información del input (obtener nombre de atleta)
 const inputName = document.getElementById("inputAthletes");
+
 
 searchButton.addEventListener("click", function showAll (){
   showInfoAthletes();
@@ -59,5 +61,51 @@ function showInfoAthletes () {
 //2.2 Manipular el DOM para mostrar los datos del atleta buscado en sus respectivos elementos de HTML
 //3. Crear una función para mostrar y ocultar el contenido de la tabla
 // obtengo en una variable/constante la referencia a la tabla
+
+// PARA REALIZAR UNA FUNCIÓN QUE CARGUE LOS ELEMENTOS PARA EL INPUT DE PAÍSES
+
+// function init (){
+//   const select=document.createElement(select);
+//   const option1=document.createElement("option");
+//   option1.setAttribute("value", "value1");
+//   const option1Text=document.createTextNode("option 1");
+//   option1.appendChild(option1Text);
+
+// }
+
+// window.onload=init;
+// //select Países
+
+
+// const filtrerAthlete=listAthletes();
+// //team de atletas 
+// const teamAthletes = filtrerAthlete.map(({team})=>team);
+
+// //elimina teams repetidos
+// const ultimateTeam = teamAthletes.filter((item,index)=>{
+//   return teamAthletes.indexOf(item) === index;
+// })
+
+// //ordenar team
+// ultimateTeam.sort();
+
+
+// function loadTeam() {
+//   const team = ultimateTeam; //Tu array de teams
+//   const select = document.getElementById("input_country"); //Seleccionamos el select
+
+  
+//   for(let i=0; i < team.length; i++){ 
+//     const option = document.createElement("option"); //Creamos la opcion
+//     option.setAttribute('value', team[i])
+//     option.innerHTML = team[i]; //Metemos el texto en la opción
+//     select.appendChild(option); //Metemos la opción en el select
+    
+//   }
+  
+// }
+// loadTeam();
+
+const showCountries=document.querySelector(".submit_show");
 
 

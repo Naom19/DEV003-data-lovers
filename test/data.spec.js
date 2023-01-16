@@ -21,7 +21,7 @@
 // });
 import {searchAthleteByName} from "../src/data.js";
 
-test('La funcion debe retornar un objeto vacio cuando no se proporcie un nombre',() => {
+test('La funcion debe retornar un objeto vacio cuando no se proporcione un nombre',() => {
   // preparativos
   const name = null
 
@@ -46,7 +46,7 @@ test('La funcion debe retornar un objeto vacio cuando no se proporcie un nombre'
 
 //toContain es una propiedad del objeto resultante del método expect, por eso como lo teníamos antes no funcionaba
 
-test('La funcion debe retornar un objeto con la informacion de Giovanni  cuando se proporcien el nombre de Giovanni Abagnale',() => {
+test('La funcion debe retornar un objeto con la informacion de Giovanni  cuando se proporcione el nombre de Giovanni Abagnale',() => {
   // preparando el escenario
   const name = 'Giovanni Abagnale'
   

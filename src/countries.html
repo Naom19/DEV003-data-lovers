@@ -7,9 +7,9 @@
     <title>Países</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styleCountries.css" />
-    <link rel="stylesheet" href="index.html"/>
-    <script src="main.js" type="module"></script>
-    <script src="data.js" type="module"></script>
+    
+    
+    <!-- <script src="data.js" type="module"></script> -->
 </head>
 <body>
     <!--<iframe class="ifMenu" src="menu.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="00" scrolling="no"></iframe>-->
@@ -21,17 +21,105 @@
 
     <section class="containerCountries">
         <form action="#">
-            <input class="searchCountries" type="text" id="inputCountry" placeholder="Buscar por país">
+         
+          
+              <p>
+                <input class="input_country" id="input_country" type="search" name="searchCountries" list="listCountries" placeholder="Busca por país">
+                <input class="input_gender" id="input_gender" type="search" name="searchGendernpm" placeholder="Gender">
+                <input class="submit_show" type="submit"  value="Mostrar">
+              </p>
+           
+            <datalist id="listCountries">
+              
+              <option value="" selected disabled>
+                            
+            </datalist>
         </form>
-        <table id="tableCountry">
-            <tr>
-              <th class="country"></th>
-              <th class="athletesNumber" type="number">Número de atletas</th>
-            </tr>
-                  <td class="flag"> <img src="https://cdn.britannica.com/49/149-004-986E1BD8/flag-design-similarities-Ecuador-Colombia-flags-Venezuela.jpg" height="10rem" width="13rem">poner bandera</td>
-              <td>29</td>
-          </table>
-    </section>
+        <section class="intro">
+          <div class="bg-image h-100" style="background-color: #f5f7fa;">
+            <div class="mask d-flex align-items-center h-100">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body p-0">
+                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 43.75rem">
+                          <table class="table table-striped mb-0" id="countryTable">
+                            <thead style="background-color: #002d72;">
+                              <tr>
+                                <th scope="col">Country</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Sport</th>
+                                <th scope="col">Event</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Medal</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tableCountries">
+                              <tr>
+                                <td>Australia</td>
+                                <td>Nicole Elise Beck</td>
+                                <td>Rugby Sevens</td>
+                                <td>Rugby Sevens Women's Rugby Sevens</td>
+                                <td>F</td>
+                                <td>Gold</td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
+          
+    </section>
+    <script src="./mainCountries.js" type="module"></script>
 </body>
+
 </html>
