@@ -1,4 +1,4 @@
-import {searchAthleteByName} from "./data.js";
+import {searchAthleteByName, athletesData, listCountries} from "./data.js";
 //import olympics from "./data/athletes/olympics.js";
 //Variable del input
 const searchButton = document.querySelector(".searchBtn");
@@ -106,18 +106,6 @@ function showInfoAthletes () {
 // }
 // loadTeam();
 
+const showCountries=document.querySelector(".submit_show");
 
-buildTable();
-function buildTable(data){
-  const countryTable=document.getElementById("countryTable");
-  for(let i=0; i<data.length; i++){
-    const row = `<tr>
-                  <td> ${data[i].country}</td>
-                  <td> ${data[i].name}</td>
-                  <td> ${data[i].sport}</td>
-                  <td> ${data[i].event}</td>
-                  <td> ${data[i].medal}</td>
-              </tr>`
-    countryTable.innerHTML += row;
-  }
-}
+
