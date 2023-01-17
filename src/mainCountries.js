@@ -1,28 +1,33 @@
-import {listCountries } from "./data.js";
+import {listCountries, listCountries1 } from "./data.js";
 
 function buildTable(data) {
-//   const countryTable = document.getElementById("countryTable");
-  const tableBody = document.getElementById("tableCountries");
-  console.log(tableBody);
-//countryTable.innerHTML = ''; - esto hace que no se muestra la tabla
-  for (let i = 0; i < data[20]; i++) {
-    // let cou = `country-${i}`
-    
-
+  let suma="";
+  for (let i = 0; i < 20; i++) {
     const row = `<tr>
-                <td> ${data[i].country}</td>
+                <td> ${data[i].team}</td>
                 <td> ${data[i].name}</td>
                 <td> ${data[i].sport}</td>
                 <td> ${data[i].event}</td>
                 <td> ${data[i].gender}</td>
                 <td> ${data[i].medal}</td>
                 </tr>`
-    tableBody.innerHTML += row;
-    tableBody.appendChild(row);
+    suma += row;
   }
-  console.log("después del for", tableBody)
+  return suma;
 }
+// console.log(listCountries1);
+// buildTable(listCountries1);
 
-buildTable(listCountries);
+function showTable(){
+  const tableBody = document.getElementById("tableCountries");
+  // for(const country of  listCountries1){
+  tableBody.innerHTML += buildTable(listCountries1)
+  //}
+  // tableBody.appendChild(rows);
+  console.log("después del for", tableBody)
+
+}
+showTable(listCountries);
+
 //la ejecución antes de la definición
 // showCountries.addEventListener("click", buildTable(listCountries));

@@ -52,11 +52,15 @@ export function searchAthleteByName(athleteName){
 // }
 
 
-export const listCountries=athletesData.filter(function(country){
-  return country 
+export const listCountries=athletesData.map(
+  athlete=>athlete.team
+);
 
-});
-// console.table(listCountries);
+export const listCountries1=athletesData.map(
+  ({ team, name, sport, event, gender, medal  }) => ({ team, name, sport, event, gender, medal }));
+
+console.table(listCountries1);
+
 
 
 
