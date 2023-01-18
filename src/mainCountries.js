@@ -1,8 +1,24 @@
-import {listCountries, listCountries1 } from "./data.js";
+import {listCountries, listCountries1, searchAthletesByCountry } from "./data.js";
+
+const countryInput = document.getElementById("input_country");
+countryInput.addEventListener('input', showAthletesByCountry);
+
+function showAthletesByCountry(){
+  const country = countryInput.value;
+  const athletesByCountry = searchAthletesByCountry(country);
+  if (athletesByCountry.length > 0){
+    const athletesTable = buildTable(athletesByCountry);
+    const tableBody = document.getElementById("tableCountries");
+    tableBody.innerHTML = athletesTable;
+  }
+}
 
 function buildTable(data) {
   let suma="";
-  for (let i = 0; i < 20; i++) {
+
+  const tableRows = data.length > 20 ? 20 : data.length;
+
+  for (let i = 0; i < tableRows; i++) {
     const row = `<tr>
                 <td> ${data[i].team}</td>
                 <td> ${data[i].name}</td>
@@ -15,8 +31,6 @@ function buildTable(data) {
   }
   return suma;
 }
-// console.log(listCountries1);
-// buildTable(listCountries1);
 
 function showTable(){
   const tableBody = document.getElementById("tableCountries");
