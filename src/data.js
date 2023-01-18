@@ -59,7 +59,39 @@ export const listCountries=athletesData.map(
 export const listCountries1=athletesData.map(
   ({ team, name, sport, event, gender, medal  }) => ({ team, name, sport, event, gender, medal }));
 
-console.table(listCountries1);
+// console.table(listCountries1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const filterAthletes = (dataAll,string) => {
+  const newArray = dataAll.filter((obj)=> obj.name.toLowerCase().startsWith(string));
+  return newArray;
+};
+
+export const filtroGender = (dataAll, string) => {
+  const newArray = dataAll.filter((elemento) => elemento.gender === string); //
+  return newArray;
+};
+
+export const  medalAthletes = athletesData.map(({gender})=>gender);
 
 
 

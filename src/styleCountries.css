@@ -39,7 +39,7 @@ body,
 table td,
 table th {
   text-overflow: ellipsis;
-  white-space: nowrap;
+  
   overflow: hidden;
 }
 
@@ -48,13 +48,17 @@ thead th {
   background-color: #0199d9;
 }
 
+#thEvent{
+  white-space: nowrap;
+}
+
 .card {
   border-radius: .5rem;
 }
 
 .table-scroll {
   border-radius: .5rem;
-  /* overflow-y: scroll; */
+  /* overflow-y: scroll;  */
 }
 
 .table-scroll table thead th {
@@ -68,14 +72,14 @@ thead {
 table {
     border-collapse: collapse;
     border: 0.1rem solid rgb(200,200,200);
-    letter-spacing: 0.0625rem;
+    letter-spacing: 0.1rem; 
     font-family: OlympicSans;
     font-size: 1rem;
   }
   
   td, th {
     border: 0.1rem solid rgb(190,190,190);
-    padding: 0.6rem 1.25rem;
+    padding: 0.6rem 1rem;
   }
    
   /*Aquí termina la tabla para mostrar el país y su número de atletas*/

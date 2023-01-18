@@ -1,8 +1,8 @@
-import {listCountries, listCountries1 } from "./data.js";
+import { listCountries, listCountries1, filtroGender } from "./data.js";
 
 function buildTable(data) {
-  let suma="";
-  for (let i = 0; i < 20; i++) {
+  let suma = "";
+  for (let i = 0; i < data.length; i++) {
     const row = `<tr>
                 <td> ${data[i].team}</td>
                 <td> ${data[i].name}</td>
@@ -15,19 +15,49 @@ function buildTable(data) {
   }
   return suma;
 }
-// console.log(listCountries1);
-// buildTable(listCountries1);
 
-function showTable(){
+function showTable() {
   const tableBody = document.getElementById("tableCountries");
   // for(const country of  listCountries1){
   tableBody.innerHTML += buildTable(listCountries1)
   //}
   // tableBody.appendChild(rows);
-  console.log("después del for", tableBody)
-
 }
 showTable(listCountries);
 
 //la ejecución antes de la definición
-// showCountries.addEventListener("click", buildTable(listCountries));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Función para mostrar el filtro de género
+
+function filterGenderTable(gender) {
+  const inputFilterGender=document.getElementById("input_gender");
+  inputFilterGender.addEventListener("change", (e) => {
+    const medalName = e.target.value;
+    const inputFilterGender = filtroGender(medalName)
+    buildTable(gender);
+    });
+}
+
+filterGenderTable();

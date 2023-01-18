@@ -12,6 +12,17 @@
     <!-- <script src="data.js" type="module"></script> -->
 </head>
 <body>
+  <header>
+    <nav class="navigationBar" id="navigationMenu">
+      <a href="index.html#mainMenu">
+        <img class="olympicRingsLogo" id="Olympic_logo"  src="https://olympics.com/images/static/b2p-images/logo_color.svg">
+      </a>
+      <button class="navigationButtons"><a id="rioButton" href="index.html#rio_2016">Río 2016</a></button>
+      <button class="navigationButtons"><a id="countriesButton" href="countries.html" >Países</a></button>
+      <button class="navigationButtons"><a id="sportsButton" href="sports.html">Deportes</a></button>
+      <button class="navigationButtons"><a id="athletesButton" href="athletes.html">Atletas</a></button>
+    </nav>
+  </header>
     <!--<iframe class="ifMenu" src="menu.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="00" scrolling="no"></iframe>-->
     <div class="firtSection">
         <img id="rioLogoCountries" src="https://img.olympicchannel.com/images/image/private/f_auto/w_300/primary/fzntd3nnabdno6x16pns">
@@ -43,14 +54,14 @@
                   <div class="col-12">
                     <div class="card">
                       <div class="card-body p-0">
-                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 43.75rem">
+                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" >
                           <table class="table table-striped mb-0" id="countryTable">
                             <thead style="background-color: #002d72;">
                               <tr>
                                 <th scope="col">Country</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Sport</th>
-                                <th scope="col">Event</th>
+                                <th scope="col" >Sport</th>
+                                <th scope="col" >Event</th>
                                 <th scope="col">Gender</th>
                                 <th scope="col">Medal</th>
                               </tr>
