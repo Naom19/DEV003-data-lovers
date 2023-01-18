@@ -27,13 +27,8 @@ export function searchAthleteByName(athleteName){
 // 2. Por cada atleta iterado comparar su campo name contra athleteName
 // 3. Si coincide el nombre, retornar el atleta iterado
 // 4. Si no coincide retornar objeto vacio
-
 //import athletes from "./data/athletes/olympics.js"
-  
-
 //console.log(JSON.stringify(athletesList)); de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
-
-
 
 // function countries () {
 //   const container= document.querySelector("#tableCountry");
@@ -50,7 +45,10 @@ export function searchAthleteByName(athleteName){
 //     } 
 //   } 
 // }
-
+export function searchAthletesByCountry(country) {
+  const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
+  return athletesByCountry;
+}
 
 export const listCountries=athletesData.map(
   athlete=>athlete.team
