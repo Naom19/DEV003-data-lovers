@@ -53,13 +53,26 @@ export function searchAthleteByName(athleteName){
 
 
 export const listCountries=athletesData.map(
-  athlete=>athlete.team
+  athlete=>athlete
 );
+
+// console.table(listCountries);
 
 export const listCountries1=athletesData.map(
   ({ team, name, sport, event, gender, medal  }) => ({ team, name, sport, event, gender, medal }));
 
-// console.table(listCountries1);
+//console.table(listCountries1);
+
+
+export function searchAthletesByCountry(country) {
+  const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
+  return athletesByCountry;
+}
+
+export function searchAthletesByGender(genderAthlete) {
+  const athletesByGender = athletesData.filter(athlete => athlete.gender.toLowerCase().includes(genderAthlete.toLowerCase()));
+  return athletesByGender;
+}
 
 
 
@@ -81,17 +94,12 @@ export const listCountries1=athletesData.map(
 
 
 
-export const filterAthletes = (dataAll,string) => {
-  const newArray = dataAll.filter((obj)=> obj.name.toLowerCase().startsWith(string));
-  return newArray;
-};
 
-export const filtroGender = (dataAll, string) => {
-  const newArray = dataAll.filter((elemento) => elemento.gender === string); //
-  return newArray;
-};
+
+
 
 export const  medalAthletes = athletesData.map(({gender})=>gender);
+//  console.table(medalAthletes);
 
 
 

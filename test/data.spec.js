@@ -1,13 +1,13 @@
 //import { example, anotherExample } from '../src/data.js';
 
-//describe('example', () => {
-  //it('is a function', () => {
-    //expect(typeof example).toBe('function');
-  // });
+// describe('example', () => {
+//   it('is a function', () => {
+//     expect(typeof example).toBe('function');
+//   });
 
-  // it('returns `example`', () => {
-    // expect(example()).toBe('example');
-  // });
+//   it('returns `example`', () => {
+//     expect(typeof example).toBe('example');
+//   });
 // });
 
 // describe('anotherExample', () => {
@@ -16,12 +16,13 @@
 //   });
 
 //   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
+//     expect(typeof anotherExample).toBe('OMG');
 //   });
 // });
-import {searchAthleteByName} from "../src/data.js";
 
-test('La funcion debe retornar un objeto vacio cuando no se proporcione un nombre',() => {
+import { searchAthleteByName } from "../src/data.js";
+
+test('La funcion debe retornar un objeto vacio cuando no se proporcione un nombre', () => {
   // preparativos
   const name = null
 
@@ -30,7 +31,8 @@ test('La funcion debe retornar un objeto vacio cuando no se proporcione un nombr
 
 
   // validar los resultados 
-  expect(result).toEqual({"name": "",
+  expect(result).toEqual({
+    "name": "",
     "gender": "",
     "height": "",
     "weight": "",
@@ -39,23 +41,24 @@ test('La funcion debe retornar un objeto vacio cuando no se proporcione un nombr
     "noc": "",
     "age": "",
     "event": "",
-    "medal": ""})
+    "medal": ""
+  })
 
 
 })
 
 //toContain es una propiedad del objeto resultante del método expect, por eso como lo teníamos antes no funcionaba
 
-test('La funcion debe retornar un objeto con la informacion de Giovanni  cuando se proporcione el nombre de Giovanni Abagnale',() => {
+test('La funcion debe retornar un objeto con la informacion de Giovanni  cuando se proporcione el nombre de Giovanni Abagnale', () => {
   // preparando el escenario
   const name = 'Giovanni Abagnale'
-  
+
 
   // ejecutando la prueba
   const result = searchAthleteByName(name);
 
   // validando los resultados
-  expect(result).toEqual( {
+  expect(result).toEqual({
     "name": "Giovanni Abagnale",
     "gender": "M",
     "height": "198",

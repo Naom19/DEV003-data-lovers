@@ -1,8 +1,9 @@
-import { listCountries, listCountries1, filtroGender } from "./data.js";
+import { listCountries, listCountries1, searchAthletesByCountry, searchAthletesByGender} from "./data.js";
 
 function buildTable(data) {
   let suma = "";
-  for (let i = 0; i < data.length; i++) {
+  const tableRows = data.length > 20 ? 20 : data.length;
+  for (let i = 0; i < tableRows; i++) {
     const row = `<tr>
                 <td> ${data[i].team}</td>
                 <td> ${data[i].name}</td>
@@ -18,46 +19,59 @@ function buildTable(data) {
 
 function showTable() {
   const tableBody = document.getElementById("tableCountries");
-  // for(const country of  listCountries1){
   tableBody.innerHTML += buildTable(listCountries1)
-  //}
-  // tableBody.appendChild(rows);
 }
 showTable(listCountries);
 
 //la ejecución antes de la definición
 
+const countryInput = document.getElementById("input_country");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Función para mostrar el filtro de género
-
-function filterGenderTable(gender) {
-  const inputFilterGender=document.getElementById("input_gender");
-  inputFilterGender.addEventListener("change", (e) => {
-    const medalName = e.target.value;
-    const inputFilterGender = filtroGender(medalName)
-    buildTable(gender);
-    });
+function showAthletesByCountry(){
+  const country = countryInput.value;
+  const athletesByCountry = searchAthletesByCountry(country);
+  if (athletesByCountry.length > 0){
+    const athletesTable = buildTable(athletesByCountry);
+    const tableBody = document.getElementById("tableCountries");
+    tableBody.innerHTML = athletesTable;
+  }
 }
+countryInput.addEventListener('input', showAthletesByCountry);
 
-filterGenderTable();
+
+const genderInput = document.getElementById("input_gender");
+
+function showAthletesByGender(){
+  const gender = genderInput.value;
+  const athletesByGender = searchAthletesByGender(gender);
+  if (athletesByGender.length > 0){
+    const athletesTable = buildTable(athletesByGender);
+    const tableBody = document.getElementById("tableCountries");
+    tableBody.innerHTML = athletesTable;
+  }
+}
+genderInput.addEventListener('input', showAthletesByGender);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
