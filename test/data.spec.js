@@ -20,7 +20,7 @@
 //   });
 // });
 
-import { searchAthleteByName } from "../src/data.js";
+import { searchAthleteByName, searchAthletesByCountry } from "../src/data.js";
 
 test('La funcion debe retornar un objeto vacio cuando no se proporcione un nombre', () => {
   // preparativos
@@ -73,21 +73,22 @@ test('La funcion debe retornar un objeto con la informacion de Giovanni  cuando 
 
 })
 
-// test('searchAthleteByName', searchAthleteByName, () => {
 
-//   const athlete = ["name",
-//     "gender",
-//     "height",
-//     "weight",
-//     "sport",
-//     "team",
-//     "noc",
-//     "age",
-//     "event",
-//     "medal"];
-//   it ('it returns athlete information', () => {
-//     // const x = expect(athlete)
-//     // x.toContain('name')
-//     expect(athlete).toContain('name');
-//   })
-// });
+
+//Crear test para casos en que el resultado sea nulo, vacío, números, mayúsculas y minúsculas. 
+test ('Evaluar que searchAthletesByCountry que contenga tanto mayúsculas como minúsculas', ()=>{
+  const country= "Brazil";
+
+  const result = searchAthletesByCountry(country);
+
+  expect (result).toContain({
+    "name": "Maurcio Borges Almeida Silva",
+    "gender": "M",
+    "sport": "Volleyball",
+    "team": "Brazil",
+    "event": "Volleyball Men's Volleyball",
+    "medal": "Gold"
+  })
+
+  
+})

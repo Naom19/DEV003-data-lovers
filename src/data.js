@@ -34,7 +34,6 @@ export function searchAthleteByName(athleteName){
 //console.log(JSON.stringify(athletesList)); de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
 
 
-
 // function countries () {
 //   const container= document.querySelector("#tableCountry");
 //   const nameOfTheCountry = country.value;
@@ -56,18 +55,35 @@ export const listCountries=athletesData.map(
   athlete=>athlete
 );
 
-// console.table(listCountries);
 
 export const listCountries1=athletesData.map(
   ({ team, name, sport, event, gender, medal  }) => ({ team, name, sport, event, gender, medal }));
-
-//console.table(listCountries1);
-
+//map nos permite obtener los elemento, aplicarles cambios para crear un nuevo arreglo.
+//filter nos permite comparar la información ingresada con la del arreglo creado guardarla
 
 export function searchAthletesByCountry(country) {
-  const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
+  const athletesByCountry = [];
+  for(let index=0; index < athletesData.length; index++){
+    if (athletesData[index].team.toLowerCase().includes(country.toLowerCase())){
+      athletesByCountry.push({
+        team: athletesData[index].team,
+        name: athletesData[index].name,
+        sport: athletesData[index].sport,
+        event: athletesData[index].event,
+        gender: athletesData[index].gender,
+        medal: athletesData[index].medal,
+      })
+    }
+  }
   return athletesByCountry;
 }
+
+//La función anterior puede resumirse de la siguiente manera, sin embargo es menos descriptiva
+// export function searchAthletesByCountry(country) {
+//   const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
+//   return athletesByCountry;
+// }
+
 
 export function searchAthletesByGender(genderAthlete) {
   const athletesByGender = athletesData.filter(athlete => athlete.gender.toLowerCase().includes(genderAthlete.toLowerCase()));
