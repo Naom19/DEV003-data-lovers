@@ -30,21 +30,6 @@ export function searchAthleteByName(athleteName){
 //import athletes from "./data/athletes/olympics.js"
 //console.log(JSON.stringify(athletesList)); de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
 
-// function countries () {
-//   const container= document.querySelector("#tableCountry");
-//   const nameOfTheCountry = country.value;
-//   for (let i = 0; i <= data.athletes.length; i++) {
-//    const countriesTable = data.athletes[i].value;//antes[i].team;
-//    const abreviationNocTable = data.athletes[i].value;//antes[i].noc;
-//    let nAthletes = document.querySelector(".athletesNumber");
-    
-//    if (searchCountry === countriesTable || searchCountry === abreviationNocTable)  {
-//    countriesFunction.textContent = athletes.team;
-//    nameOfTheCountry.textContent = data.athletes[5].value;
-//    como asignar a mi tabla/caja de texto el valor de athletes[i].PROPIEDADAUSAR
-//     } 
-//   } 
-// }
 // export function searchAthletesByCountry(country) {
 //   const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
 //   return athletesByCountry;
@@ -83,9 +68,8 @@ export function searchAthletesByCountry(country) {
 //   return athletesByCountry;
 // }
 
-
 export function searchAthletesByGender(genderAthlete) {
-  const athletesByGender = athletesData.filter(athlete => athlete.gender.toLowerCase().includes(genderAthlete.toLowerCase()));
+  const athletesByGender = athletesData.filter(athleteppp => athleteppp.gender.toLowerCase().includes(genderAthlete.toLowerCase()));
   return athletesByGender;
 }
 
