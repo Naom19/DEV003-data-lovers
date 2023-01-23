@@ -27,23 +27,19 @@ export function searchAthleteByName(athleteName){
 // 2. Por cada atleta iterado comparar su campo name contra athleteName
 // 3. Si coincide el nombre, retornar el atleta iterado
 // 4. Si no coincide retornar objeto vacio
-//import athletes from "./data/athletes/olympics.js"
-//console.log(JSON.stringify(athletesList)); de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
+// import athletes from "./data/athletes/olympics.js"
+// console.log(JSON.stringify(athletesList)); 
+// de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
 
-// export function searchAthletesByCountry(country) {
-//   const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
-//   return athletesByCountry;
-// }
+// export const listCountries=athletesData.map(
+//   athlete=>athlete //Probando el uso de método map
+// );
 
-export const listCountries=athletesData.map(
-  athlete=>athlete
-);
-
-
-export const listCountries1=athletesData.map(
+export const listPropertiesCountries=athletesData.map(
   ({ team, name, sport, event, gender, medal  }) => ({ team, name, sport, event, gender, medal }));
-//map nos permite obtener los elemento, aplicarles cambios para crear un nuevo arreglo.
-//filter nos permite comparar la información ingresada con la del arreglo creado guardarla
+  
+//map nos permite obtener los elementos, aplicarles cambios para crear un nuevo arreglo.
+//filter nos permite comparar la información ingresada con la del arreglo creado y guardarla
 
 export function searchAthletesByCountry(country) {
   const athletesByCountry = [];
@@ -69,37 +65,6 @@ export function searchAthletesByCountry(country) {
 // }
 
 export function searchAthletesByGender(genderAthlete) {
-  const athletesByGender = athletesData.filter(athleteppp => athleteppp.gender.toLowerCase().includes(genderAthlete.toLowerCase()));
+  const athletesByGender = athletesData.filter(athlete => athlete.gender.toLowerCase().includes(genderAthlete.toLowerCase()));
   return athletesByGender;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const  medalAthletes = athletesData.map(({gender})=>gender);
-//  console.table(medalAthletes);
-
-
-
-

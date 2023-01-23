@@ -1,4 +1,4 @@
-import { listCountries, listCountries1, searchAthletesByCountry, searchAthletesByGender} from "./data.js";
+import {listPropertiesCountries, searchAthletesByCountry, searchAthletesByGender} from "./data.js";
 
 function buildTable(data) {
   let suma = "";
@@ -19,14 +19,12 @@ function buildTable(data) {
 
 function showTable() {
   const tableBody = document.getElementById("tableCountries");
-  tableBody.innerHTML += buildTable(listCountries1)
+  tableBody.innerHTML += buildTable(listPropertiesCountries)
 }
-showTable(listCountries);
+showTable(listPropertiesCountries);
 
-//la ejecución antes de la definición
 
 const countryInput = document.getElementById("input_country");
-
 function showAthletesByCountry(){
   const country = countryInput.value;
   const athletesByCountry = searchAthletesByCountry(country);
@@ -40,7 +38,6 @@ countryInput.addEventListener('input', showAthletesByCountry);
 
 
 const genderInput = document.getElementById("input_gender");
-
 function showAthletesByGender(){
   const gender = genderInput.value;
   const athletesByGender = searchAthletesByGender(gender);
@@ -51,27 +48,3 @@ function showAthletesByGender(){
   }
 }
 genderInput.addEventListener('input', showAthletesByGender);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
