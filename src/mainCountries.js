@@ -1,23 +1,8 @@
-import {listCountries, listCountries1, searchAthletesByCountry } from "./data.js";
-
-const countryInput = document.getElementById("input_country");
-countryInput.addEventListener('input', showAthletesByCountry);
-
-function showAthletesByCountry(){
-  const country = countryInput.value;
-  const athletesByCountry = searchAthletesByCountry(country);
-  if (athletesByCountry.length > 0){
-    const athletesTable = buildTable(athletesByCountry);
-    const tableBody = document.getElementById("tableCountries");
-    tableBody.innerHTML = athletesTable;
-  }
-}
+import {listPropertiesCountries, searchAthletesByCountry, searchAthletesByGender} from "./data.js";
 
 function buildTable(data) {
-  let suma="";
-
+  let suma = "";
   const tableRows = data.length > 20 ? 20 : data.length;
-
   for (let i = 0; i < tableRows; i++) {
     const row = `<tr>
                 <td> ${data[i].team}</td>
@@ -32,16 +17,34 @@ function buildTable(data) {
   return suma;
 }
 
-function showTable(){
+function showTable() {
   const tableBody = document.getElementById("tableCountries");
-  // for(const country of  listCountries1){
-  tableBody.innerHTML += buildTable(listCountries1)
-  //}
-  // tableBody.appendChild(rows);
-  console.log("después del for", tableBody)
-
+  tableBody.innerHTML += buildTable(listPropertiesCountries)
 }
-showTable(listCountries);
+showTable(listPropertiesCountries);
 
-//la ejecución antes de la definición
-// showCountries.addEventListener("click", buildTable(listCountries));
+
+const countryInput = document.getElementById("input_country");
+function showAthletesByCountry(){
+  const country = countryInput.value;
+  const athletesByCountry = searchAthletesByCountry(country);
+  if (athletesByCountry.length > 0){
+    const athletesTable = buildTable(athletesByCountry);
+    const tableBody = document.getElementById("tableCountries");
+    tableBody.innerHTML = athletesTable;
+  }
+}
+countryInput.addEventListener('input', showAthletesByCountry);
+
+
+const genderInput = document.getElementById("input_gender");
+function showAthletesByGender(){
+  const gender = genderInput.value;
+  const athletesByGender = searchAthletesByGender(gender);
+  if (athletesByGender.length > 0){
+    const athletesTable = buildTable(athletesByGender);
+    const tableBody = document.getElementById("tableCountries");
+    tableBody.innerHTML = athletesTable;
+  }
+}
+genderInput.addEventListener('input', showAthletesByGender);

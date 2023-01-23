@@ -27,38 +27,44 @@ export function searchAthleteByName(athleteName){
 // 2. Por cada atleta iterado comparar su campo name contra athleteName
 // 3. Si coincide el nombre, retornar el atleta iterado
 // 4. Si no coincide retornar objeto vacio
-//import athletes from "./data/athletes/olympics.js"
-//console.log(JSON.stringify(athletesList)); de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
+// import athletes from "./data/athletes/olympics.js"
+// console.log(JSON.stringify(athletesList)); 
+// de esta manera podemos visualizar todos los datos dentro de athletesList en la consola
 
-// function countries () {
-//   const container= document.querySelector("#tableCountry");
-//   const nameOfTheCountry = country.value;
-//   for (let i = 0; i <= data.athletes.length; i++) {
-//    const countriesTable = data.athletes[i].value;//antes[i].team;
-//    const abreviationNocTable = data.athletes[i].value;//antes[i].noc;
-//    let nAthletes = document.querySelector(".athletesNumber");
-    
-//    if (searchCountry === countriesTable || searchCountry === abreviationNocTable)  {
-//    countriesFunction.textContent = athletes.team;
-//    nameOfTheCountry.textContent = data.athletes[5].value;
-//    como asignar a mi tabla/caja de texto el valor de athletes[i].PROPIEDADAUSAR
-//     } 
-//   } 
-// }
+// export const listCountries=athletesData.map(
+//   athlete=>athlete //Probando el uso de método map
+// );
+
+export const listPropertiesCountries=athletesData.map(
+  ({ team, name, sport, event, gender, medal  }) => ({ team, name, sport, event, gender, medal }));
+  
+//map nos permite obtener los elementos, aplicarles cambios para crear un nuevo arreglo.
+//filter nos permite comparar la información ingresada con la del arreglo creado y guardarla
+
 export function searchAthletesByCountry(country) {
-  const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
+  const athletesByCountry = [];
+  for(let index=0; index < athletesData.length; index++){
+    if (athletesData[index].team.toLowerCase().includes(country.toLowerCase())){
+      athletesByCountry.push({
+        team: athletesData[index].team,
+        name: athletesData[index].name,
+        sport: athletesData[index].sport,
+        event: athletesData[index].event,
+        gender: athletesData[index].gender,
+        medal: athletesData[index].medal,
+      })
+    }
+  }
   return athletesByCountry;
 }
 
-export const listCountries=athletesData.map(
-  athlete=>athlete.team
-);
+//La función anterior puede resumirse de la siguiente manera, sin embargo es menos descriptiva
+// export function searchAthletesByCountry(country) {
+//   const athletesByCountry = athletesData.filter(athlete => athlete.team.toLowerCase().includes(country.toLowerCase()));
+//   return athletesByCountry;
+// }
 
-export const listCountries1=athletesData.map(
-  ({ team, name, sport, event, gender, medal  }) => ({ team, name, sport, event, gender, medal }));
-
-console.table(listCountries1);
-
-
-
-
+export function searchAthletesByGender(genderAthlete) {
+  const athletesByGender = athletesData.filter(athlete => athlete.gender.toLowerCase().includes(genderAthlete.toLowerCase()));
+  return athletesByGender;
+}

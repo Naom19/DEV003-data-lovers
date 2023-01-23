@@ -1,4 +1,4 @@
-import {searchAthleteByName, athletesData, listCountries} from "./data.js";
+import {searchAthleteByName} from "./data.js";
 //import olympics from "./data/athletes/olympics.js";
 //Variable del input
 const searchButton = document.querySelector(".searchBtn");
