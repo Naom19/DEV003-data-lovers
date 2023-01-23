@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="index.html"/> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleAthletes.css"/>
+    <script src="main.js" type="module"></script>
+    <script src="data.js" type="module"></script>
+   
+    <title>Atletas</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigationBar" id="navigationMenu">
+          <a href="index.html#mainMenu">
+            <img class="olympicRingsLogo" id="Olympic_logo"  src="https://olympics.com/images/static/b2p-images/logo_color.svg">
+          </a>
+          <button class="navigationButtons"><a id="rioButton" href="index.html#rio_2016">Río 2016</a></button>
+          <button class="navigationButtons"><a id="countriesButton" href="countries.html" >Países</a></button>
+          <button class="navigationButtons"><a id="sportsButton" href="sports.html">Deportes</a></button>
+          <button class="navigationButtons"><a id="athletesButton" href="athletes.html">Atletas</a></button>
+        </nav>
+      </header>
+
+    <!--
+    1. Crear una sección o div para el filtro(input) y botón.
+    2. Crear el filtro(input) para atletas.
+    3. Crear un botón.
+    4. Estilizar en CSS. (Pasar info del menú principal )
+    5. En JS declarar const con querySelector
+    6. Crear una función como la del video para llamar la información del array athletes y mostrarlo en la interfaz. 
+-->
+    <main>
+        <div class="firtSection">
+            <img id="rioLogoCountries" src="https://img.olympicchannel.com/images/image/private/f_auto/w_300/primary/fzntd3nnabdno6x16pns"/>
+            <img id="rioImageCountries" src="https://img.olympicchannel.com/images/image/private/t_16-9_1920-padded/f_auto/v1538355600/primary/gj8no9hru59ghbrxchql"/>
+        </div>
+        <section class="containerAthletes">
+            <div class="headerContainer">
+                <h2 class="titleAthletes">Atletas olímpicos</h2>
+                <input type="text" id="inputAthletes" placeholder="Nombre de atleta">
+                <label type="text" id="notFound"></label>
+                <button class="searchBtn" id="searchAthletesBtn">Buscar</button>
+            </div>
+           
+            <table class="tableAthletes" id="infoAthletes">
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td id="nameTag"> </td>
+                    </tr>
+                    <tr>
+                        <th>Country</th>
+                        <td id="countryTag"> </td>
+                    </tr>
+                    <tr>
+                        <th>Sport</th>
+                        <td id="sportTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Event</th>
+                        <td id="eventTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Height</th>
+                        <td id="heightTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td id="weightTag"></td>
+                    </tr>
+                    <tr>
+                        <th>Medal</th>
+                        <td id="medalTag"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+    <footer class="footer-container">
+        <p class="float-right"><a href="#">Ir arriba</a></p>
+        <p>&copy; 2022-2023 DEV003 Regional - Laboratoria - DIANA GUAIÑA - NAOMI PEÑA - PROYECTO Data lovers  &middot; <a href="#">Privacy</a> </p>
+    </footer>
+</body>
+</html>

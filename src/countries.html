@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleCountries.css" />
+    
+    
+    <!-- <script src="data.js" type="module"></script> -->
+</head>
+<body>
+  <header>
+    <nav class="navigationBar" id="navigationMenu">
+      <a href="index.html#mainMenu">
+        <img class="olympicRingsLogo" id="Olympic_logo"  src="https://olympics.com/images/static/b2p-images/logo_color.svg">
+      </a>
+      <button class="navigationButtons"><a id="rioButton" href="index.html#rio_2016">Río 2016</a></button>
+      <button class="navigationButtons"><a id="countriesButton" href="countries.html" >Países</a></button>
+      <button class="navigationButtons"><a id="sportsButton" href="sports.html">Deportes</a></button>
+      <button class="navigationButtons"><a id="athletesButton" href="athletes.html">Atletas</a></button>
+    </nav>
+  </header>
+    <!--<iframe class="ifMenu" src="menu.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="00" scrolling="no"></iframe>-->
+    <div class="firtSection">
+        <img id="rioLogoCountries" src="https://img.olympicchannel.com/images/image/private/f_auto/w_300/primary/fzntd3nnabdno6x16pns">
+        <img id="rioImageCountries" src="https://portal.andina.pe/EDPfotografia/Thumbnail/2015/03/24/000286823W.jpg">
+
+    </div>
+
+    <section class="containerCountries">
+        <form action="#">
+         
+          
+              <p>
+                <input class="input_country" id="input_country" type="search" name="searchCountries" list="listCountries" placeholder="Busca por país">
+                <input class="input_gender" id="input_gender" type="search" name="searchGendernpm" placeholder="Gender">
+                <input class="submit_show" id="submit_show" type="submit"  value="Mostrar">
+              </p>
+           
+            <datalist id="listCountries">
+              
+              <option value="" selected disabled>
+                            
+            </datalist>
+        </form>
+        <section class="intro">
+          <div class="bg-image h-100" style="background-color: #f5f7fa;">
+            <div class="mask d-flex align-items-center h-100">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body p-0">
+                        <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" >
+                          <table class="table table-striped mb-0" id="countryTable">
+                            <thead style="background-color: #002d72;">
+                              <tr>
+                                <th scope="col">Country</th>
+                                <th scope="col">Name</th>
+                                <th scope="col" >Sport</th>
+                                <th scope="col" >Event</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Medal</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tableCountries">
+                              <!-- <tr>
+                                <td>Australia</td>
+                                <td>Nicole Elise Beck</td>
+                                <td>Rugby Sevens</td>
+                                <td>Rugby Sevens Women's Rugby Sevens</td>
+                                <td>F</td>
+                                <td>Gold</td>
+                              </tr>
+                              
+                               -->
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+          
+    </section>
+    <script src="./mainCountries.js" type="module"></script>
+</body>
+
+</html>

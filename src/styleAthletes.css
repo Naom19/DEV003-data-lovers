@@ -1,0 +1,171 @@
+@font-face {
+    font-family: OlympicSans;
+    src: url(fonts/OlympicSans.ttf);
+}
+
+body {
+    display: flexbox;
+    
+    background-color:  #F5F5F5;
+    font-family: OlympicSans black;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto ;
+}
+
+button, section, h1, div, a, footer{
+    font-family: OlympicSans;
+}
+
+main {
+    
+    display: grid;
+    place-items: center;
+    font-family: OlympicSans black;
+  }  
+
+.olympicRingsLogo {
+    height: 2rem;
+    padding-left: 4rem;
+}
+
+.firtSection {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1rem;
+    padding: 5%;
+}
+
+#rioLogoCountries {
+    height: 12rem;
+    width: 11rem;
+    padding-right: 10%;
+}
+
+#rioImageCountries {
+    height: 12rem;
+    width: 20rem;
+    border-radius: 5%;
+    background-color: #F5F5F5;
+}
+
+#navigationMenu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem black;
+    background-color: #ffffff;
+    width: 100%;
+    height: 3rem;
+}
+
+#inputAthletes {
+    display: flex;
+    /*justify-content: center;*/
+    height: 2rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 0.1rem solid rgb(190,190,190);
+    padding-left: 5%;
+    font-family: OlympicSans;
+}
+
+
+#notFound {
+    color: rgb(247, 38, 38);
+      /*/ -10 si quieres que baje... 0 a los lados y 18 a la parte inferior /*/
+    margin: -0.625rem 0 1.125rem;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    
+      }
+
+
+.searchBtn {
+    border-color: #ffffff;
+    display: flex;
+    align-self: center;
+    padding: 0.50rem 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.125rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin: 14px;
+   
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 0.3rem;
+    background: #0199d9;
+    -webkit-box-shadow: 0.2rem 0.2rem 0.2rem 0 rgb(0 0 0 / 20%);
+    box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(0,0,0,0.2) ;
+}
+
+.containerAthletes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 0.5remgi;
+    width: 25rem;
+    font-family: OlympicSans;
+    /*max-width: var(--fixed-width);*/
+}
+
+.tableAthletes {
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    table-layout: auto;
+     border-collapse: collapse;
+    margin: 1.5rem 1.5rem;
+    min-width: 25rem;
+    font-size: 0.9em;
+    padding: 2rem;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    width: 100%;
+    background-color: #ffffff;
+    table-layout: auto;
+    border-collapse: collapse;
+    margin: 1.5rem 1.5rem;
+    /*min-width: 25rem;*/
+    font-size: 0.9em;
+    padding: 2rem;
+}
+
+#infoAthletes {
+    display: none;
+    
+}
+
+/* th {
+    padding
+} */
+
+td {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    
+}
+
+tr {
+    border-bottom: 0.063rem solid #dddddd;
+}
+
+footer{
+    padding-left: 15%;
+    background-color:#0199d9;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
