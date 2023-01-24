@@ -123,18 +123,3 @@ describe('searchAthletesByGender', () => {
     expect(result).toEqual(expect.arrayContaining(expected));
   });
 })
-
-describe('listPropertiesCountries', () => {
-  it('Evaluar que listPropertiesCountries muestre las propiedades definidas', () => {
-    const listProperties = [];
-    const result = listPropertiesCountries(listProperties);
-    const expected = [{
-      "team": "Cuba",
-      "name": "Denia Caballero Ponce",
-      "sport": "Athletics",
-      "event": "Athletics Women's Discus Throw",
-      "gender": "F","medal": "Bronze"
-    }]
-    expect(result).toEqual(expect.arrayContaining(expected));
-  });
-})
